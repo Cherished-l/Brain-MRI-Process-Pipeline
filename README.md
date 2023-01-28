@@ -2,6 +2,7 @@
 With the development of deep learning, a large number of works use brain MRI images for diagnostic prediction.
 However, many novices do not know much about MRI. Most natural image vision researchers often directly train the original MRI, and often cannot get good training results and explanations, which will waste a lot of time.
 Therefore, this work will describe how to preprocess the mri, and then directly align it for training.
+For ADNI Dataset and UKB Dataset.
 # Requerements
 The following work is to explain the **linux** platform, windows and mac can also be referred to, just need to pay less attention
 There are many preprocessing tools, such as Freesurfer, FSL, ANTs, SPM and so on. Here I will explain the combination of FSL and ANTs.
@@ -52,7 +53,7 @@ python all_in_one/Process_all.py
 #### perform each process on all images in turn
 ```
 python one_by_one/orient.py
-python one_by_one/remove_neck.pu
+python one_by_one/remove_neck.py
 python one_by_one/skull.py
 python one_by_one/registration.py
 python one_by_one/bias_correction.py
